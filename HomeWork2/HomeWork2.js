@@ -32,10 +32,12 @@ console.log(x);
 var a
 for (a = 1; a <= 100 ; a++) {
   if (a % 3 == 0 && a % 5 != 0) {
-      console.log(a + ' Fizz');
+      console.log('Fizz');
   } else if (a % 3 != 0 && a % 5 == 0) {
-      console.log(a + ' Buzz');
+      console.log('Buzz');
   } else if (a % 3 == 0 && a % 5 == 0) {
-      console.log(a + ' FizzBuzz');
+      console.log('FizzBuzz');
+  } else {
+      console.log(a);
   }
 }
