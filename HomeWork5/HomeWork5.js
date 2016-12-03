@@ -61,3 +61,16 @@ function trunsNumber(num) {
 }
 
 console.log(trunsNumber(911));
+
+console.log('\n*Функция преобразования объекта в строку:');
+function objectToQueryString(object) {
+    var i, query;
+    query = '';
+    for (i in object) {
+        query += "&" + i + "=" + object[i];
+    }
+    return query.substring(1,query.length);
+}
+
+console.log(objectToQueryString({user: 'Dmitry', password:
+'pass', id:1}));
