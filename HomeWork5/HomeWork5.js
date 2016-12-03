@@ -1,4 +1,4 @@
-//"use strict";
+"use strict";
 
 console.log('Домашнее задание 5:');
 console.log('\nФункция преобразования цвета:');
@@ -39,7 +39,25 @@ console.log(transForm(200,50,130));
 
 console.log('\nФункция преобразования числа в объект:');
 function trunsNumber(num) {
-    if (num < 0 && num > 999) {
-        reutrn console.log('')
+    var sot, des, edi;
+    var numberObject = {
+        'сотни': '',
+        'десятки': '',
+        'единицы': ''
+    };
+//    console.log(numberObject);
+    if (num < 0 || num > 999 || typeof(num) != 'number') {
+        console.log('Введено неправильное значение "' +num + '". Введите число от 0 до 999.\n')
+        return numberObject;
+    } else {
+        sot = Math.floor(num / 100);
+        numberObject['сотни'] = sot;
+        des = Math.floor((num - sot*100) / 10);
+        numberObject['десятки'] = des;
+        edi = Math.floor((num - sot*100 - des*10));
+        numberObject['единицы'] = edi;
     }
+    return numberObject;
 }
+
+console.log(trunsNumber(911));
