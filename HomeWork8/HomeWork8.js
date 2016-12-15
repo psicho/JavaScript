@@ -34,6 +34,11 @@ window.onload = function () {
         }
     }
     chess1();
+    function clickni () {
+
+    }
 }
+
+
 
 
