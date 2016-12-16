@@ -4,7 +4,11 @@ console.log('Домашнее задание 8:');
 
 
 window.onload = function () {
-
+    function clickni () {
+        console.log(this.id);
+        var dir;
+        dir = this.innerText;
+    }
     function chess1 () {
         var div = document.createElement('div');
         var table = document.createElement('table');
@@ -23,6 +27,8 @@ window.onload = function () {
             for (var i = 1; i < tdsearch.length; i++) {
                 j++;
                 if (tdsearch[j].innerText == '' || !(numchar.includes(tdsearch[j].innerText))) {
+                    tdsearch[j].id = j;
+                    tdsearch[j].onclick = clickni;
                     if (i % 2 != 0) {
                         tdsearch[j].style.backgroundColor = 'lightgrey';
                     }
@@ -34,11 +40,4 @@ window.onload = function () {
         }
     }
     chess1();
-    function clickni () {
-
-    }
 }
-
-
-
-

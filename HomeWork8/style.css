@@ -16,6 +16,12 @@ td {
     color: black;
 }
 
+tr td:hover {
+    z-index: 100;
+    background-color: bisque !important;
+    cursor: default;
+}
+
 h1 {
     text-decoration: inherit;
 /*    text-decoration: underline;*/
